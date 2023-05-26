@@ -14,34 +14,16 @@
   </head>
 
   <body>
-    {{#with header}}
-     <header>
-    <div>
-      <h1>{{name.firstname}} {{name.lastname}}</h1>
-    </div>
-    <div>
-      <b>{{position}}</b>
-    </div>
-    <br/>
-    <div>
-      <em>{{salary}}</em>
-    </div>
-    <br/>
-    <div>
-      <adress>{{adress}}</adress>
-    </div>
-    <br />
-    <hr />
-  </header>
-<nav>
-  {{>nav}}
-</nav>
-{{/with}}
-    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
-    {{{body}}}
    
-     {{>footer}}
-  
-  </body>
+{{>nav}}
+
+    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
+     <br/>
+    <hr>
+    {{{body}}}
+    <br/>
+    <hr>
+        {{>footer social= footer.social  firstname=header.name.firstname  lastname=header.name.lastname  adress=header.adress }}
+    </body>
 
 </html>
