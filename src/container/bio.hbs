@@ -1,0 +1,21 @@
+<h1>{{name}}</h1>
+
+<div>{{birthdate}}(<em>{{birthplace}}</em>) -
+  {{deathdate}}(<em>{{deathplace}}</em>)</div>
+<br />
+<div><b>Nationality</b>: {{nationality}}</div>
+<br />
+<div><b>Occupation</b>: {{occupation}}</div>
+<br/>
+<div><b>Known for</b>:<ul>{{#each known_for}}<li>{{this}}</li>{{/each}}</div></ul>
+<div><b>Education</b>:{{#each education}} {{institution}}({{year}}), {{field}}, {{degree}} {{/each}}</div>
+<br/>
+<div><b>Notable publication</b>:<ul>{{#each notable_publications}}<li>{{title}} ("{{publisher}}",{{year}})</li>{{/each}}</ul></div>
+<div><b>Partners</b>:<ul>{{#each partners}}<li>{{name}} ({{years}}) - <em>{{relationship}}</em></li>{{/each}}</ul></div>
+<div><b>Awards</b>:<ul>{{#each awards}}<li>{{title}} ({{year}})-{{description}}</li>{{/each}}</ul></div>
+<div><b>Influences</b>:<ul>{{#each influences}}<li>{{this}}</li>{{/each}}</ul></div>
+<div><b>Influenced</b>:<ul>{{#each influenced}}<li>{{this}}</li>{{/each}}</ul></div>
+<div><b>Quotes</b>:<ul>{{#each quotes}}<li><em><blockquote>{{this}}</blockquote></em></li>{{/each}}</ul></div>
+<div><b>Major discoveries</b>:{{#each major_discoveries}} {{title}} ({{year}}) -<em> {{description}}</em> {{/each}}</div>
+<br/>
+<div><b>Contributions</b>:{{#with contributions}} {{title}} ({{year}}) -<em>{{description}}</em> ({{field}}) {{/with}}</div>
