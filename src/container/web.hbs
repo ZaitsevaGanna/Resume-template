@@ -1,0 +1,57 @@
+{{#with web}}
+<div>{{>title data='Languages' big=true}}</div>
+<ul>
+    {{#each languages}}
+      <li>
+        {{>title data=name big=true}}
+         (<b>version:{{version}}</b>) -{{description}}
+             {{#if elements}}
+                <ul>
+                    <li>{{#each elements}}<h2>{{name}}</h2> - <em><b>{{description}}</b></em>
+                    <br/>
+                    <br/>
+                <u> Attributes:</u>
+                    <ul>
+                        <li>
+                            {{#each attributes}}<b>{{name}}</b> - {{description}}<br/>{{/each}}
+                        </li>
+                    </ul>
+                                 
+                    {{/each}}
+                     </li>
+                 </ul>
+            {{/if}}
+            {{#if properties}}
+                <ul>
+                    <li>{{#each properties}}<h2>{{name}}</h2> - <em><b>{{description}}</b></em>
+                    <br/>
+                    <br/>
+                 <u> Value:</u>
+                    <ul>
+                        <li>
+                            {{#each values}}<b>{{value}}</b> - {{description}}<br/>{{/each}}
+                        </li>
+                    </ul>
+                               
+                    {{/each}}
+                     </li>
+                </ul>
+                       
+            {{/if}}
+            {{#if functions}}
+                <ul>
+                    <li>
+                        {{#each functions}}<h2>{{name}} </h2> - <em><b>{{description}}</b></em>
+                       <br/>
+                       <br/>
+                       <u>Parameters:</u> 
+                            <ul><li>{{#each parameters }}<b>{{name}}</b>(<em>{{type}}</em>) - {{description}} {{/each}}</li></ul>
+                                                                     
+                        {{/each}}
+                    </li>
+                </ul>
+            {{/if}}
+       </li>
+    {{/each}}
+</ul>
+{{/with}}
