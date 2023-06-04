@@ -4,13 +4,15 @@ html {
 
 body {
   margin: 32px;
+  padding: 32px;
   background: #fff;
 }
 
 main,
 header,
 footer,
-nav {
+nav
+ {
   margin: 32px;
 }
 
