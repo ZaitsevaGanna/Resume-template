@@ -1,0 +1,96 @@
+{{#with navigation}}
+<div class="nav">
+    {{#each links}}
+    <div class="nav-link">
+        {{#unless @last}} <a href="{{href}}">{{text}}</a>{{/unless}}
+    </div>
+    {{#if @last}}<a class="nav-link disabled" href="{{href}}">{{text}}</a>{{/if}}
+    {{/each}}
+</div>
+{{/with}}
+
+{{#with newsBlock}}
+<h2 class="text-center">{{title}}</h2>
+<div class="row">
+    {{#each cards}}
+    <div class=" col-3 p-1">
+        <div class="card text-bg-dark p-1">
+            <div class="card-header ">{{title}}
+                {{#if isNew}}<span class="badge text-bg-success rounded-pill">Нова</span>{{/if}}
+                {{#if isTop}} <span class="badge text-bg-danger rounded-pill">Топ</span>{{/if}}
+            </div>
+            <p class="card-text">{{description}}</p>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/with}}
+
+<hr class="my-5">
+
+{{#with goodsBlock}}
+<div class="nav nav-tabs">
+    {{#each tabs}}
+    {{#unless isActive}}{{#unless isDisabled}}<div class="nav-item nav-link">{{text}}</div>{{/unless}}{{/unless}}
+    {{#if isActive}}<div class="nav-item nav-link active">{{text}}</div>{{/if}}
+    {{#if isDisabled}}<div class="nav-item nav-link disabled">{{text}}</div>{{/if}}
+    {{/each}}
+</div>
+<div class="row">
+    {{#each cards}}
+    <div class="col-4 p-1">
+        <div class="card mt-4">
+            <img class="card-img-top" src="{{image}}" alt="photo">
+            <div class="card-body">
+                <div class="card-title">{{title}}{{#if isHot}}<span
+                        class="badge rounded-pill text-bg-warning ms-2 text-light">HOT!</span>{{/if}}{{#if isNew}}<span
+                        class="badge rounded-pill text-bg-primary ms-2">Нове</span>{{/if}}</div>
+                <p class="card-text">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/with}}
+
+<hr class="my-5">
+
+{{#with subscribe}}
+<div class="row text-bg-dark">
+    <h2>{{header}}</h2>
+    <p>{{description}}</p>
+    {{#each buttons}}
+    <div>
+        <a class="btn btn-primary mb-2" href="{{link}}">{{text}}</a>
+    </div>
+    {{/each}}
+</div>
+{{/with}}
+
+<hr class="my-5">
+
+{{#with service}}
+<div class="row text-bg-success">
+    <h2 class="text-center">{{title}}</h2>
+    <p>{{description}}</p>
+    {{#each buttons}}
+    <div class="text-center">
+        <a class="btn btn-primary mb-2  " href="{{link}}">{{text}}</a>
+    </div>
+    {{/each}}
+</div>
+{{/with}}
+
+<hr class="mt-5 mb-3">
+
+<div class="row ">
+    {{#each footer }}
+    <div class="col-2 m-1">
+        {{#each this}}
+        <div class='flex-column'>
+            <a class="nav nav-link " href="{{link}}">{{text}}</a>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>
