@@ -9,9 +9,19 @@
       <br />
       {{gender}} , {{age}} years
       <div><u>friends :</u></div>
-      {{#each mutual_friends}}<ul>
-        <li>{{name}} ({{id}}) - {{gender}} , {{age}} years </li>
+      {{#each mutual_friends}}
+      <ul>
+        <li>{{name}} ({{id}}) - {{gender}} , {{age}} years<div>
+        </li>
       </ul>{{/each}}
+      <u>groups:</u>
+      <ul>{{#each groups}}
+        <li>{{name}} ({{id}}) - {{description}}<br />
+          <u><em>members:</em></u>
+          <ul>{{#each members}}<li>{{name}} (id:{{id}}) - {{gender}} , {{age}} years</li>{{/each}}</ul>
+        </li>
+        {{/each}}
+      </ul>
       <br />
     </li>
     {{/each}}
