@@ -782,7 +782,13 @@ router.get('/facebook', function (req, res) {
             ],
           },
         ],
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
+  
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -946,6 +952,11 @@ router.get('/mac', function (req, res) {
           price: 19.99,
         },
       ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
