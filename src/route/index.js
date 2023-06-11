@@ -916,6 +916,5 @@ router.get('/shophome', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
 // Підключаємо роутер до бек-енду
 module.exports = router
