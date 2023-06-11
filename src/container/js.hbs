@@ -1,0 +1,16 @@
+{{>title data=name}} 
+<em><b><p>{{description}}</p></b></em>
+<p>Founded by {{history.founder}} in {{history.year}}.</p>
+<p><b><u>Using types of variables:</u></b>{{#each types}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}.{{/if}}{{/each}}</p>
+<p><b><u>Using syntax:</u></b>{{#with syntax}}
+    <div>variables: <em>{{#each variables}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}{{/if}}{{/each}}</em></div>
+    <div>functions: <em>{{#each functions}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}{{/if}}{{/each}}</em></div>
+    <div>conditionals: <em>{{#each conditionals}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}{{/if}}{{/each}}</em></div>
+    <div>loops: <em>{{#each loops}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}{{/if}}{{/each}}</em></div>
+    <div>classes: <em>{{#each classes}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}{{/if}}{{/each}}</em></div>
+        {{/with}}</p>
+<p><b><u>Using features:</u></b>{{#each features}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}.{{/if}}{{/each}}</p>
+<p><b><u>Using libraries:</u></b>{{#each libraries}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}.{{/if}}{{/each}}</p>
+<p><b><u>Using tools:</u></b>{{#each tools}}{{#unless @last}} {{this}} ,{{/unless}}{{#if @last}}{{this}}.{{/if}}{{/each}}</p>
+<p><b><u>Community:</u></b><ul>{{#each community}}<li> {{name}} - <em>{{type}}</em></li>{{/each}}</ul></p>
+
