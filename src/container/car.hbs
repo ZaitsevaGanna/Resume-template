@@ -1,0 +1,96 @@
+<h1>{{make}} {{model}}</h1>
+<h2>{{color}} , {{year}}</h2>
+{{#with features}}
+  {{#with interior}}
+    {{#with seats}}
+      <div><b><u>Seats:</u></b>
+        {{color}}
+        {{material}}
+        {{#if heated}} , heated{{/if}}{{#if ventilated}}
+          , ventilated{{/if}}</div>
+    {{/with}}
+    {{#with dashboard}}
+      <br />
+      <div>
+        <b><u> Deshboard:</u></b>
+        {{color}}
+        {{material}}
+        <br />
+        <b>with display:</b>
+        {{#with display}}{{type}}
+          {{size}}
+          ({{resolution}})
+          {{#if touchscreen}}, touchscreen{{/if}}
+        {{/with}}
+      </div>
+    {{/with}}
+    <br />
+    <b><u> Audio: </u></b>
+    {{#with audio}}{{system}}
+      ({{speakers}}
+      speakers)
+      {{#if subwoofer}} , subwoofer{{/if}}
+      {{#if bluetooth}} , bluetooth{{/if}}
+      {{#if USB}} , USB{{/if}}
+    {{/with}}
+  {{/with}}
+  {{#with exterior}}
+    <br />
+    </br/>
+    <b><u>Wheels:</u></b>
+    {{#with wheels}}{{size}} , {{type}} type , {{color}}
+    {{/with}}
+     </br/>
+     <br/>
+    <b><u>Headlights:</u></b>
+    {{#with headlights}}{{type}} , {{brightness}} brightness , {{#if automatic}}automatic{{/if}}
+    {{/with}}
+     <br/>
+     <br/>
+    <b><u>Sunroof:</u></b>
+    {{#with sunroof}}{{type}} , {{size}} , {{#if automatic}}automatic{{/if}}
+    {{/with}}
+  {{/with}}
+  <br/>
+  <br/>
+ <b><u>Safety:</u></b>
+  {{#with safety}}
+    {{#with airbags}} ({{front}} front , {{side}} side , {{knee}} knee , {{rear}} rear) airbags   
+    {{/with}}
+    {{#with assistance}} 
+    {{#if blind_spot_monitoring}}, blind spot monitoring {{/if}}
+        {{#if rear_cross_traffic_alert}}, rear cross traffic alert {{/if}}
+     {{#if lane_departure_warning}}, lane departure warning {{/if}}
+     {{#if adaptive_cruise_control}}, adaptive cruise control {{/if}}
+      {{#if collision_warning}}, collision warning {{/if}}
+     {{/with}}
+  {{/with}}
+{{/with}}
+<br/>
+<br/>
+<b><u>Engine:</u></b>
+{{#with engine}}{{type}}, {{horsepower}} horsepower , {{displacement}} displacement , {{torque}} torque , {{ transmission.gears}} gears and {{transmission.type}} transmission
+{{/with}}
+<br/>
+</br>
+<b><u> Fuel economy:</u></b>
+{{#with fuel_economy}}
+city ({{city}}) , highway ({{highway}}) , combined ({{combined}})
+{{/with}}
+<br/>
+<br/>
+<b><u> Price:</u></b>
+<br/>
+{{#with price}}
+base - {{base}}
+<br/>
+destination - {{destination}}
+<br/>
+navigation - {{options.navigation}}
+<br/>
+moonroof - {{options.moonroof}}
+<br/>
+premium paint - {{options.premium_paint}}
+<br/>
+<h2>Total price: {{total}}</h2>
+{{/with}}
