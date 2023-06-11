@@ -1,0 +1,18 @@
+<h1>{{name}}</h1>
+{{#each users}}
+  <div>Name: {{name}}(id:{{id}})</div>
+  <div>Gender: {{gender}}</div>
+  <div>Age: {{age}} years</div>
+   <div><u>Friends:</u><ul>
+     {{#each friends}}<li>{{name}}(id:{{id}})
+    <br/>
+    {{gender}} , {{age}} years
+    <div><u>friends :</u></div>
+    {{#each mutual_friends}}<ul><li>{{name}} ({{id}}) - {{gender}} , {{age}} years </li></ul>{{/each}}
+       <br/></li>
+   {{/each}}
+   </ul>
+   </div>
+
+
+{{/each}}
