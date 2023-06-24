@@ -1,0 +1,24 @@
+{{#each data }}
+<div class="card my-3 py-1 ps-2">
+    <div class="row">
+        <img class="col-2" src="{{image}}" alt="photo">
+        <div class="col-4">
+            <h5 class="mt-3">{{name}}</h5>
+            <p class="text-muted">{{description}}</p>
+        </div>
+        <div class="col-2">
+            {{#with price}}
+            <p class="mt-4">{{title}}</p>
+            <h5>{{value}}</h5>
+            {{/with}}
+        </div>
+        <p class="col-2 mt-5">{{amount}}</p>
+        <div class="col-2 ps-0">
+            {{#each buttons}}
+            <button
+                class="btn {{#if isPrimary}}btn-primary{{else}} btn-outline-danger{{/if}} p-1 mt-3">{{text}}</button>
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{/each}}
