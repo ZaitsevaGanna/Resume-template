@@ -243,17 +243,4 @@
     {{!-- футер --}}
     <hr class="mb-2 mt-5">
 
-    <div class="row">
-        {{#each footer}}
-        <div class="col-2">
-            {{#each this}}
-            <div>
-                {{#unless @last}}<a class="nav-link text-primary" href="{{link}}">{{text}}</a>{{/unless}}
-                {{#if @last}}
-                <a class="nav-link disabled" href="{{link}}">{{text}}</a>{{/if}}
-            </div>
-            {{/each}}
-        </div>
-        {{/each}}
-    </div>
-</main>
+    {{>navFooter data=footer}}

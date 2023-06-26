@@ -1,0 +1,66 @@
+{{>navHeader data=navigation}}
+{{#with header}}
+<h2 class="mt-5 mb-3">{{title}}</h2>
+{{#with button}}
+<a href='{{link}}' class="btn btn-outline-secondary">{{text}}</a>
+{{/with}}
+{{/with}}
+<hr class="my-5">
+{{> cartGoodsItem data=goodsBlock}}
+
+
+
+
+
+
+<hr class="my-5">
+
+{{#with total}}
+<div class=" m-0 p-0">
+    <h3 class="m-1">{{title}}</h3>
+    <h2 class="m-1">{{amount}}</h2>
+    <p class="my-2 ms-2 text-secondary">{{delivery}}</p>
+    {{#each buttons}}
+    <a href='{{link}}' class="btn {{#if isSuccess}}btn-success{{else}} btn-outline-success{{/if}} m-2 p-1 ">{{text}}</a>
+    </br>
+    {{/each}}
+</div>
+{{/with}}
+
+
+
+<hr class="my-5">
+{{#with goodsOtherBlock}}
+<h2 class="mb-2 text-center">{{title}}</h2>
+<div class="row">
+    {{#each cards}}
+    <div class="col-4 p-1 my-0">
+        <div class="card ">
+            <img class="card-img-top" src="{{image}}" alt="photo">
+            <div class="card-body">
+                <div class="card-title">{{title}}{{#if isHot}}<span
+                        class="badge rounded-pill text-bg-warning ms-2 text-light">HOT!</span>{{/if}}{{#if idNew}}<span
+                        class="badge rounded-pill text-bg-primary ms-2">Нове</span>{{/if}}</div>
+                <p class="card-text">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/with}}
+<hr class="my-5">
+
+{{#with subscribe}}
+<div class="card text-bg-dark m-0 p-0">
+    <div class="card-body m-0 p-0">
+        <h2 class="m-1">{{header}}</h2>
+        <p class="my-1 ms-2">{{description}}</p>
+        {{#each buttons}}
+        <a href='{{link}}' class="btn btn-primary m-1 p-1">{{text}}</a>
+        </br>
+        {{/each}}
+    </div>
+</div>
+{{/with}}
+<hr class="mb-2 mt-5">
+{{>navFooter data=footer}}

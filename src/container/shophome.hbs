@@ -1,13 +1,4 @@
-{{#with navigation}}
-<div class="nav">
-    {{#each links}}
-    <div class="nav-link">
-        {{#unless @last}} <a href="{{href}}">{{text}}</a>{{/unless}}
-    </div>
-    {{#if @last}}<a class="nav-link disabled" href="{{href}}">{{text}}</a>{{/if}}
-    {{/each}}
-</div>
-{{/with}}
+{{>navHeader data=navigation}}
 
 {{#with newsBlock}}
 <h2 class="text-center">{{title}}</h2>
@@ -83,14 +74,5 @@
 
 <hr class="mt-5 mb-3">
 
-<div class="row ">
-    {{#each footer }}
-    <div class="col-2 m-1">
-        {{#each this}}
-        <div class='flex-column'>
-            <a class="nav nav-link " href="{{link}}">{{text}}</a>
-        </div>
-        {{/each}}
-    </div>
-    {{/each}}
-</div>
+
+{{>navFooter data=footer}}

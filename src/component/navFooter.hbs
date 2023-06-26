@@ -1,0 +1,13 @@
+<div class="row">
+    {{#each data}}
+    <div class="col-2">
+        {{#each this}}
+        <div>
+            {{#unless @last}}<a class="nav-link text-primary" href="{{link}}">{{text}}</a>{{/unless}}
+            {{#if @last}}
+            <a class="nav-link disabled" href="{{link}}">{{text}}</a>{{/if}}
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>
