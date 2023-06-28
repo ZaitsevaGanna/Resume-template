@@ -77,20 +77,8 @@
 
 {{>reviewItem data=reviewList}}
 
-{{#with service}}
-<div class="row text-bg-success">
-    <h2 class="text-center">{{title}}</h2>
-    <p>{{description}}</p>
-    {{#each buttons}}
-    <div class="text-center">
-        <a class="btn btn-primary mb-2  " href="{{link}}">{{text}}</a>
-    </div>
-    {{/each}}
-</div>
-{{/with}}
+{{>successService data=service}}
 
 <hr class="mt-5 mb-3">
-
-
 
 {{>navFooter data=footer}}

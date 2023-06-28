@@ -1,0 +1,11 @@
+{{#with data}}
+<div class="row text-bg-success mt-5">
+    <h2 class="text-center">{{title}}</h2>
+    <p>{{description}}</p>
+    {{#each buttons}}
+    <div class="text-center">
+        <a class="btn btn-primary mb-2  " href="{{link}}">{{text}}</a>
+    </div>
+    {{/each}}
+</div>
+{{/with}}
