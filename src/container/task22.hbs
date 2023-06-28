@@ -1,23 +1,25 @@
 <h1 class="text-center">{{page_header.title}}</h1>
-<p class="text-center">{{page_header.description}}</p>
+<p class="text-center text-uppercase">{{page_header.description}}</p>
 {{#with section}}
 <div class="card">
     <div class="card-body">
         {{#with about_us}}
-        <div class="display-6 text-end">{{title_list.main}}</div>
+
+        <h1 class=" text-end mb-3 font-weight-bold">{{title_list.main}}</h1>
+
         <h2 class="text-right text-end">{{title_list.sub}}</h2>
         <button class="btn btn-outline-primary">{{button.text}}</button>
         {{/with}}
     </div>
 </div>
 {{#with advantage}}
-<div class="card">
+<div class="card my-5">
     <div class="card-body">
-        <div class="display-5"><b>{{title}}</b></div>
+        <div class="display-5 mb-4 text-secondary"><b>{{title}}</b></div>
         <div class="card">
             <div class="card-body">
                 {{#with efficiency}}
-                <div class="display-4"><b>{{title}}</b></div>
+                <div class="display-5 mb-4 text-secondary"><b>{{title}}</b></div>
                 <h6>{{sub_title}}</h6>
                 <p>{{description}}</p>
                 <button class="btn btn-outline-warning">{{button}}</button>
@@ -25,10 +27,10 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card my-3">
             <div class="card-body">
                 {{#with innovation}}
-                <div class="display-4 text-center"><b>{{title}}</b></div>
+                <div class="display-5 text-center  mb-4  text-secondary"><b>{{title}}</b></div>
                 <h6 class="text-center">{{sub_title}}</h6>
                 <p class="text-center">{{description}}</p>
                 <button class="btn btn-outline-warning">{{button}}</button>
@@ -39,7 +41,7 @@
         <div class="card">
             <div class="card-body">
                 {{#with collaboration}}
-                <div class="display-4 text-end"><b>{{title}}</b></div>
+                <div class="display-5 text-end  mb-4 text-secondary"><b>{{title}}</b></div>
                 <h6 class='text-end'>{{sub_title}}</h6>
                 <p class='text-end'>{{description}}</p>
                 <button class="btn btn-outline-warning">{{button}}</button>
@@ -54,7 +56,7 @@
 <div class="card">
     <div class="card-body">
         <div class="carb-body">
-            <div class="display-5"><b>{{title}}</b></div>
+            <div class="display-5 mb-4"><b>{{title}}</b></div>
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-body">{{info.sub_title}}</h5>
@@ -62,7 +64,7 @@
                         {{#with info.detail}}
                         <div class="card-body">
                             <p>{{text}}</p>
-                            <button class="btn btn-primary">{{button}}</button>
+                            <button class="btn btn-success">{{button}}</button>
                         </div>
                         {{/with}}
                     </div>

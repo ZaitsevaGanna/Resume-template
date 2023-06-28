@@ -1,9 +1,2 @@
-<a href={{href}}{{#if blank}} target="_blank"{{/if}}>{{text}}</a>
-{{#unless noLine}}
-{{#if line}}
---
-{{else}}
-//
-{{/if}}
-{{/unless}}
-
+<a class=" {{#if inLine}} d-inline{{/if}}d-block btn {{#if blank}}btn-outline-primary py-0 px-1 my-2{{else}} btn-primary  py-0 px-1 my-2  {{/if}}"
+    href={{href}}{{#if blank}} {{/if}}>{{text}}</a>
