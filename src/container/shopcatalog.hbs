@@ -1,0 +1,84 @@
+{{>navHeader data=navigation}}
+<div class="breadcrumb">
+    {{#each breadcrumb}}
+    <div class="breadcrumb-item my-4 mt-5 ">
+
+        {{#unless @last}}<a class="text-decoration-none" href="{{url}}">{{name}}</a>{{/unless}}
+        {{#if @last}}
+        <a class=" text-decoration-none  text-dark" href="{{url}}">{{name}}</a>{{/if}}
+    </div>
+    {{/each}}
+</div>
+
+<h2 class="mb-3">{{header}}</h2>
+
+<div class="row my-3">
+    {{#each sortBlock}}
+
+    <div class="col-3 px-1">
+
+        <select class="form-select my-3 ">
+            <option>{{placeholder}}</option>
+            {{#each options}}
+            <option value="{{value}}">{{text}}</option>
+            {{/each}}
+        </select>
+    </div>
+    {{/each}}
+</div>
+
+<div class="row my-3">
+    {{#with filterBlock}}
+
+    <div class="col-4 px-1">
+        <div class="card p-2">
+            {{#with sellers}}
+            <p>{{title}}</p>
+            <div class="form-check">
+                {{#each list}}
+                <input type="checkbox" class="form-check-input py-1">
+                <p class="mb-2">{{value}}</p>
+                {{/each}}
+            </div>
+            {{/with}}
+            <hr class="my-2">
+            {{#with brands}}
+            <p>{{title}}</p>
+            <input class="form-control mb-3" type="text" placeholder="{{input.placeholder}}">
+            <div class="form-check">
+                {{#each options}}
+                <input type="checkbox" class="form-check-input py-1">
+                <p class="mb-2">{{value}}</p>
+                {{/each}}
+            </div>
+            {{/with}}
+            <hr class="my-2">
+            {{#with price}}
+            <p>{{title}}</p>
+            {{#with range}}
+            <input class="form-control mb-3" type="text" placeholder="{{from}}">
+            <input class="form-control mb-3" type="text" placeholder="{{to}}">
+            {{/with}}
+            {{#with button}}
+            <a class="btn btn-outline-secondary col-4 " href="{{link}}">{{text}}</a>
+            {{/with}}
+            {{/with}}
+            {{#each filterList}}
+            <hr class="my-2">
+            {{> checkbox}}
+            {{/each}}
+        </div>
+    </div>
+    {{/with}}
+
+    <div class="col-8">
+        <div class="row pt-0">
+            {{#each goodsList}}
+            {{>catalogItem}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{>successService data=service}}
+<hr class="mt-5 mb-3">
+{{>navFooter data=footer}}

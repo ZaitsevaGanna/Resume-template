@@ -1,20 +1,20 @@
- {{#with footer}}<footer>
-    <hr />
-    <br />
- <div>
+{{#with footer}}<footer>
+  <hr />
+  <br />
+  <div>
     {{#with social}}
-      {{>link text=email.text href=email.href blank=true }}
-      {{>link  text=phone.text href=phone.href blank=true }} 
-      {{>link text=linkedin.text  href=linkedin.href blank=true noLine=true }}
+    {{>link text=email.text href=email.href blank=true inLine=true}}
+    {{>link text=phone.text href=phone.href blank=true inLine=true}}
+    {{>link text=linkedin.text href=linkedin.href blank=true inLine=true }}
     {{/with}}
   </div>
-  <br/>
+  <br />
   <div>
     <em>Copyright by {{../header.name.firstname}} {{../header.name.lastname}}</em>
   </div>
-    <br/>
-    <div>
-      <adress>{{../header.adress}}</adress>
-    </div>
-    </footer>
-      {{/with}}
+  <br />
+  <div>
+    <adress>{{../header.adress}}</adress>
+  </div>
+</footer>
+{{/with}}
