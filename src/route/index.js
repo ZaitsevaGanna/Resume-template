@@ -2085,11 +2085,11 @@ router.get('/shoporder', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-router.get('/shopcart', function (req, res) {
+router.get('/shopcard', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shopcart', {
+  res.render('shopcard', {
     layout: 'basic',
     navigation: {
       links: [
